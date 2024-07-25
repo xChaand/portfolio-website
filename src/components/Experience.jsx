@@ -1,14 +1,13 @@
-import { OrbitControls, ScrollControls } from "@react-three/drei";
-import { Bike } from "./Bike";
+import { ContactShadows, OrbitControls } from "@react-three/drei";
+import { Scene } from "./Scene";
 
 export const Experience = () => {
   return (
     <>
-      <ambientLight intensity={1} />
-      <OrbitControls enableZoom={false} />
-      <ScrollControls pages={3} damping={0.25}>
-        <Bike />
-      </ScrollControls>
+      <OrbitControls enableZoom={true} />
+      <ambientLight intensity={0.1} />
+      <directionalLight position={[0, 20, 20]} intensity={1} />
+      <Scene />
     </>
   );
 };
