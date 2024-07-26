@@ -4,7 +4,11 @@ import { Experience } from "./components/Experience";
 
 function App() {
   return (
-    <Canvas>
+    <Canvas
+      orthographic
+      camera={{ zoom: 90, position: [0, 0, 100] }}
+      frameloop="always"
+    >
       <Experience />
     </Canvas>
   );

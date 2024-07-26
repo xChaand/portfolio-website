@@ -5,13 +5,13 @@ Command: npx gltfjsx@6.4.1 public/models/Scene.glb
 
 import React, { useLayoutEffect, useRef } from "react";
 import { useGLTF, useScroll } from "@react-three/drei";
-import { animated, useSpring } from "@react-spring/three";
-import { useFrame } from "@react-three/fiber";
 import gsap from "gsap";
+import { useFrame } from "@react-three/fiber";
 
-export function Scene(props) {
+export function Test(props) {
+  const { nodes, materials } = useGLTF("/models/Scene.glb");
+
   const ref = useRef();
-  const refRot = useRef();
   const tl = useRef();
   tl.current = 0;
   const scroll = useScroll();
@@ -22,77 +22,19 @@ export function Scene(props) {
   useLayoutEffect(() => {
     tl.current = gsap.timeline();
 
+    // VERTICAL ANIMATION
     tl.current.to(
       ref.current.position,
       {
-        x: 3,
+        duration: 2,
         y: -1,
       },
       0
     );
-
-    tl.current.to(
-      refRot.current.rotation,
-      {
-        y: Math.PI / 6 + (-2 * Math.PI) / 3,
-      },
-      2
-    );
-
-    tl.current.to(
-      refRot.current.rotation,
-      {
-        y: Math.PI / 6 + (-4 * Math.PI) / 3,
-      },
-      3
-    );
-
-    tl.current.to(
-      ref.current.position,
-      {
-        duration: 3,
-        y: 12,
-      },
-      4
-    );
   }, []);
-
-  const { carouselRotation } = useSpring({
-    from: {
-      carouselRotation: 0,
-    },
-    to: [
-      {
-        carouselRotation: (-2 * Math.PI) / 3,
-        delay: 1000,
-      },
-      {
-        carouselRotation: (-Math.PI * 4) / 3,
-        delay: 1000,
-      },
-      {
-        carouselRotation: (-6 * Math.PI) / 3,
-        delay: 1000,
-      },
-    ],
-    config: {
-      mass: 5,
-      tension: 400,
-      friction: 50,
-    },
-    loop: true,
-    immediate: true,
-  });
-
-  const { nodes, materials } = useGLTF("/models/Scene.glb");
   return (
-    <group ref={ref} {...props} dispose={null} position={[15, 0, 0]}>
-      <animated.group
-        rotation-y={Math.PI / 6}
-        rotation-x={Math.PI / 6}
-        scale={[0.8, 1, 0.8]}
-        ref={refRot}
-      >
+    <group {...props} dispose={null} ref={ref}>
+      <group scale={[0.919, 1, 0.919]}>
         <mesh
           geometry={nodes.Cylinder001.geometry}
           material={materials["Basketball.001"]}
@@ -161,7 +103,7 @@ export function Scene(props) {
           geometry={nodes.Cylinder001_16.geometry}
           material={materials["Material.005"]}
         />
-      </animated.group>
+      </group>
     </group>
   );
 }
