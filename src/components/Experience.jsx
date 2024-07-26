@@ -5,15 +5,16 @@ import {
 } from "@react-three/drei";
 import { Scene } from "./Scene";
 import { Test } from "./Test";
+import Overlay from "./Overlay";
 
 export const Experience = () => {
   return (
     <>
-      <OrbitControls enableZoom={false} />
       <gridHelper args={[20, 20, 0xff0000, "teal"]} />
       <ambientLight intensity={0.5} />
       <directionalLight position={[5, 5, 5]} intensity={2} />
       <ScrollControls pages={4} damping={0.4}>
+        <Overlay />
         <Scene />
         {/* <Test /> */}
       </ScrollControls>
