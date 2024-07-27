@@ -22,39 +22,23 @@ export function Scene(props) {
   useLayoutEffect(() => {
     tl.current = gsap.timeline();
 
-    tl.current.to(
-      ref.current.position,
-      {
-        x: 3,
-        y: -1,
-      },
-      0
-    );
+    tl.current.to(ref.current.position, {
+      duration: 0.25,
+      x: 3,
+      y: -1,
+    });
 
-    tl.current.to(
-      refRot.current.rotation,
-      {
-        y: Math.PI / 6 + (-2 * Math.PI) / 3,
-      },
-      2
-    );
+    tl.current.to(refRot.current.rotation, {
+      y: Math.PI / 6 + (-2 * Math.PI) / 3,
+    });
 
-    tl.current.to(
-      refRot.current.rotation,
-      {
-        y: Math.PI / 6 + (-4 * Math.PI) / 3,
-      },
-      3
-    );
+    tl.current.to(refRot.current.rotation, {
+      y: Math.PI / 6 + (-4 * Math.PI) / 3,
+    });
 
-    tl.current.to(
-      ref.current.position,
-      {
-        duration: 3,
-        y: 12,
-      },
-      4
-    );
+    tl.current.to(ref.current.position, {
+      y: 12,
+    });
   }, []);
 
   const { carouselRotation } = useSpring({
