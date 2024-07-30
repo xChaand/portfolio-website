@@ -37,6 +37,7 @@ export function Scene(props) {
     });
 
     tl.current.to(ref.current.position, {
+      delay: 0.2,
       y: 12,
     });
   }, []);
