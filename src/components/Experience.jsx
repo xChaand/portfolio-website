@@ -1,5 +1,4 @@
 import { ContactShadows, OrbitControls } from "@react-three/drei";
-import { Basketball } from "./Hero/Basketball";
 import Scene from "./Hero/Scene";
 
 export const Experience = () => {
