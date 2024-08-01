@@ -24,8 +24,9 @@ export function Scene(props) {
 
     tl.current.to(ref.current.position, {
       duration: 0.25,
-      x: 3,
+      x: 2,
       y: -1,
+      z: 2,
     });
 
     tl.current.to(refRot.current.rotation, {
@@ -34,11 +35,6 @@ export function Scene(props) {
 
     tl.current.to(refRot.current.rotation, {
       y: Math.PI / 6 + (-4 * Math.PI) / 3,
-    });
-
-    tl.current.to(ref.current.position, {
-      delay: 0.2,
-      y: 12,
     });
   }, []);
 

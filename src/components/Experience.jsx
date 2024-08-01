@@ -2,6 +2,7 @@ import {
   ContactShadows,
   OrbitControls,
   ScrollControls,
+  Scroll,
 } from "@react-three/drei";
 import { Scene } from "./Scene";
 import { Test } from "./Test";
@@ -13,10 +14,10 @@ export const Experience = () => {
       {/* <gridHelper args={[20, 20, 0xff0000, "teal"]} /> */}
       <ambientLight intensity={0.5} />
       <directionalLight position={[5, 5, 5]} intensity={2} />
-      <ScrollControls pages={5} damping={0.2}>
-        <Overlay />
+      <ScrollControls pages={4} damping={0.2}>
         <Scene />
-        {/* <Test /> */}
+
+        <Overlay />
       </ScrollControls>
       <ContactShadows scale={30} opacity={0.32} />
     </>
