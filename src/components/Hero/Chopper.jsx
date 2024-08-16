@@ -9,7 +9,7 @@ import { useGLTF } from "@react-three/drei";
 export function Chopper(props) {
   const { nodes, materials } = useGLTF("models/chopper.glb");
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} position={[1, 2, 1]}>
       <mesh geometry={nodes.Cube001.geometry} material={materials.Yellow} />
       <mesh geometry={nodes.Cube001_1.geometry} material={materials.Black} />
       <mesh geometry={nodes.Cube001_2.geometry} material={materials.Black} />

@@ -9,7 +9,7 @@ import { useGLTF } from "@react-three/drei";
 export function Shoes(props) {
   const { nodes, materials } = useGLTF("models/shoes.glb");
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} position={[-2, -2, 1]}>
       <mesh geometry={nodes.Cube011.geometry} material={materials.Black} />
       <mesh geometry={nodes.Cube011_1.geometry} material={materials.OffWhite} />
       <mesh geometry={nodes.Cube011_2.geometry} material={materials.BabyBlue} />

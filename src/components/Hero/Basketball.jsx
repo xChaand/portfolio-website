@@ -9,13 +9,7 @@ import { useGLTF } from "@react-three/drei";
 export function Basketball(props) {
   const { nodes, materials } = useGLTF("models/basketball.glb");
   return (
-    <group
-      {...props}
-      dispose={null}
-      scale={3}
-      position={[3, 2, 1]}
-      rotation={[0, 3, 2]}
-    >
+    <group {...props} dispose={null} position={[3, 2, 1]} rotation={[0, 3, 2]}>
       <mesh
         geometry={nodes.BasketballBall.geometry}
         material={materials.Basketball}

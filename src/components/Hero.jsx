@@ -2,11 +2,11 @@ import { Typewriter } from "react-simple-typewriter";
 import VolumeUpIcon from "@mui/icons-material/VolumeUp";
 
 export default function Hero() {
-  let nameAudio = new Audio("public/chaand.mp3");
+  let nameAudio = new Audio("/chaand.mp3");
   return (
     <div className="w-screen">
       <div className="h-screen flex flex-col items-center justify-center">
-        <div className="flex items-center text-8xl text-white">
+        <div className="flex items-center text-8xl text-gray-800">
           Hi I'm <span className="ml-4 mr-4 font-medium">Chaand</span>
           <button
             onClick={() => nameAudio.play()}
@@ -15,7 +15,7 @@ export default function Hero() {
             <VolumeUpIcon />
           </button>
         </div>
-        <span className="mt-4 text-5xl text-gray-300">
+        <span className="mt-4 text-5xl text-gray-600">
           <Typewriter
             words={["Developer", "Biker", "Hooper"]}
             loop

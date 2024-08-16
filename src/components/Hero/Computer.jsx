@@ -9,7 +9,7 @@ import { useGLTF } from "@react-three/drei";
 export function Computer(props) {
   const { nodes, materials } = useGLTF("models/computer.glb");
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} position={[-1, -2, 0]}>
       <mesh geometry={nodes.keyboard002.geometry} material={materials.Black} />
       <mesh geometry={nodes.keyboard002_1.geometry} material={materials.Gray} />
       <mesh
