@@ -58,8 +58,7 @@ export default function Hero() {
             >
               <DownloadIcon />
 
-              <span className=" ml-2 ">Download</span>
-              <span>CV</span>
+              <span className=" ml-2 ">Download CV</span>
             </a>
             <a
               href=""
