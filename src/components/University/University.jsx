@@ -1,7 +1,7 @@
 export default function University() {
   return (
-    <div className="p-20 w-screen">
-      <div className="h-screen mt-10 pt-10 flex flex-col text-center justify-start text-2xl sm:text-4xl xl:text-5xl text-gray-800">
+    <div className="w-screen">
+      <div className="h-screen backdrop-blur-sm flex flex-col text-center justify-center text-lg sm:text-2xl xl:text-3xl text-gray-800">
         <h1>
           I'm a <span className="italic">Sophomore</span> at the{" "}
           <span className="font-semibold">University of Wisconsin-Madison</span>

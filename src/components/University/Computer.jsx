@@ -14,7 +14,11 @@ export function Computer(props) {
   const { nodes, materials } = useGLTF("models/computer.glb");
   return (
     <group {...props} dispose={null}>
-      <group rotation={[-Math.PI / 2, 0, 0]} scale={1.2} position={[3, -8, 0]}>
+      <group
+        rotation={[-Math.PI / 2, 0, 0]}
+        scale={1.2}
+        position={[3.4, -5.5, 0]}
+      >
         <group rotation={[Math.PI / 1.5, -Math.PI / 6, 0]}>
           <mesh
             geometry={nodes.Object_4.geometry}

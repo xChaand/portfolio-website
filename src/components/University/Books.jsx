@@ -9,23 +9,18 @@ import { useGLTF } from "@react-three/drei";
 export function Books(props) {
   const { nodes, materials } = useGLTF("models/books.glb");
   return (
-    <group {...props} dispose={null}>
-      <group rotation={[0, 0.561, 0]} scale={[0.09, 0.016, 0.127]}>
-        <mesh
-          geometry={nodes.Cube012.geometry}
-          material={materials.Basketball}
-        />
-        <mesh
-          geometry={nodes.Cube012_1.geometry}
-          material={materials.OffWhite}
-        />
-        <mesh geometry={nodes.Cube012_2.geometry} material={materials.Black} />
-        <mesh geometry={nodes.Cube012_3.geometry} material={materials.Yellow} />
-        <mesh
-          geometry={nodes.Cube012_4.geometry}
-          material={materials.BabyBlue}
-        />
-      </group>
+    <group
+      {...props}
+      dispose={null}
+      rotation-y={Math.PI / 2}
+      scale={5}
+      position={[1, -8.2, 0]}
+    >
+      <mesh geometry={nodes.Cube012.geometry} material={materials.Basketball} />
+      <mesh geometry={nodes.Cube012_1.geometry} material={materials.OffWhite} />
+      <mesh geometry={nodes.Cube012_2.geometry} material={materials.Black} />
+      <mesh geometry={nodes.Cube012_3.geometry} material={materials.Yellow} />
+      <mesh geometry={nodes.Cube012_4.geometry} material={materials.BabyBlue} />
     </group>
   );
 }

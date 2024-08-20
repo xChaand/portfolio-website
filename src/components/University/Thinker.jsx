@@ -12,8 +12,8 @@ export function Thinker(props) {
     <group
       {...props}
       dispose={null}
-      scale={[0.025, 0.025, 0.025]}
-      position={[-4, -9, 0]}
+      scale={[0.03, 0.03, 0.03]}
+      position={[-4, -7.5, 0]}
       rotation={[0, Math.PI / 8, 0]}
     >
       <mesh
