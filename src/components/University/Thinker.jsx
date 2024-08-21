@@ -4,7 +4,7 @@ Command: npx gltfjsx@6.5.0 public/models/thinker.glb
 */
 
 import React from "react";
-import { useGLTF } from "@react-three/drei";
+import { Outlines, useGLTF } from "@react-three/drei";
 
 export function Thinker(props) {
   const { nodes, materials } = useGLTF("models/thinker.glb");
@@ -19,7 +19,9 @@ export function Thinker(props) {
       <mesh
         geometry={nodes.imagetostl_mesh0.geometry}
         material={materials.mat0}
-      />
+      >
+        <Outlines thickness={2} color="black" />
+      </mesh>
     </group>
   );
 }

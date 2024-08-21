@@ -53,7 +53,7 @@ export function Carousel(props) {
         <mesh
           geometry={nodes.Cylinder001.geometry}
           material={materials["Basketball.001"]}
-        />
+        ></mesh>
         <mesh
           geometry={nodes.Cylinder001_1.geometry}
           material={materials["Pink.001"]}

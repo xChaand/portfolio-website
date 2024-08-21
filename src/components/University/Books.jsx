@@ -4,7 +4,7 @@ Command: npx gltfjsx@6.5.0 public/models/books.glb
 */
 
 import React from "react";
-import { useGLTF } from "@react-three/drei";
+import { Outlines, useGLTF } from "@react-three/drei";
 
 export function Books(props) {
   const { nodes, materials } = useGLTF("models/books.glb");
@@ -12,15 +12,25 @@ export function Books(props) {
     <group
       {...props}
       dispose={null}
-      rotation-y={Math.PI / 2}
+      rotation={[Math.PI / 6, Math.PI / 2, 0]}
       scale={5}
       position={[1, -8.2, 0]}
     >
-      <mesh geometry={nodes.Cube012.geometry} material={materials.Basketball} />
-      <mesh geometry={nodes.Cube012_1.geometry} material={materials.OffWhite} />
-      <mesh geometry={nodes.Cube012_2.geometry} material={materials.Black} />
-      <mesh geometry={nodes.Cube012_3.geometry} material={materials.Yellow} />
-      <mesh geometry={nodes.Cube012_4.geometry} material={materials.BabyBlue} />
+      <mesh geometry={nodes.Cube012.geometry} material={materials.Basketball}>
+        <Outlines thickness={0.01} color="black" />
+      </mesh>
+      <mesh geometry={nodes.Cube012_1.geometry} material={materials.OffWhite}>
+        <Outlines thickness={0.01} color="black" />
+      </mesh>
+      <mesh geometry={nodes.Cube012_2.geometry} material={materials.Black}>
+        <Outlines thickness={0.01} color="black" />
+      </mesh>
+      <mesh geometry={nodes.Cube012_3.geometry} material={materials.Yellow}>
+        <Outlines thickness={0.01} color="black" />
+      </mesh>
+      <mesh geometry={nodes.Cube012_4.geometry} material={materials.BabyBlue}>
+        <Outlines thickness={0.01} color="black" />
+      </mesh>
     </group>
   );
 }
