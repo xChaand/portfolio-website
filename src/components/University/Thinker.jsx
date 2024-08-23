@@ -5,16 +5,19 @@ Command: npx gltfjsx@6.5.0 public/models/thinker.glb
 
 import React from "react";
 import { Outlines, useGLTF } from "@react-three/drei";
+import { motion } from "framer-motion-3d";
 
 export function Thinker(props) {
+  const { section } = props;
   const { nodes, materials } = useGLTF("models/thinker.glb");
   return (
-    <group
+    <motion.group
       {...props}
       dispose={null}
       scale={[0.03, 0.03, 0.03]}
       position={[-4, -7.5, 0]}
       rotation={[0, Math.PI / 8, 0]}
+      animate={{ scale: section === 0 ? 0.01 : 0.03 }}
     >
       <mesh
         geometry={nodes.imagetostl_mesh0.geometry}
@@ -22,7 +25,7 @@ export function Thinker(props) {
       >
         <Outlines thickness={2} color="black" />
       </mesh>
-    </group>
+    </motion.group>
   );
 }
 

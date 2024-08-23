@@ -16,7 +16,7 @@ function App() {
       <ScrollControls pages={4}>
         <ScrollManager section={section} onSectionChange={setSection} />
         <Scroll>
-          <Experience />
+          <Experience section={section} />
         </Scroll>
         <Scroll html>
           <Hero />
