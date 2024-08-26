@@ -16,16 +16,16 @@ export default function Scene(props) {
   const { section } = props;
   return (
     <>
-      <Float speed={3} floatingRange={[-1, 0.5]}>
+      <Float speed={3} floatingRange={[-0.3, -0.4]}>
         <Thinker section={section} />
       </Float>
       <Carousel />
-      <Float speed={3} rotationIntensity={0.5}>
+      <Float speed={2} rotationIntensity={0.5} floatingRange={[-0.3, 0.5]}>
         <Computer />
       </Float>
-      <Float speed={2} floatIntensity={3}>
+      {/* <Float speed={2} floatIntensity={3}>
         <Books />
-      </Float>
+      </Float> */}
       <Avatar animation={animation} position={[0, -17, 0]} />
     </>
   );

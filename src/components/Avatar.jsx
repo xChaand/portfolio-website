@@ -38,6 +38,7 @@ export function Avatar(props) {
       actions[animation].reset().fadeOut(0.2);
     };
   }, [animation]);
+
   return (
     <group
       {...props}

@@ -35,7 +35,7 @@ export function Carousel(props) {
       friction: 50,
     },
     loop: true,
-    immediate: true,
+    immediate: false,
   });
   const { nodes, materials } = useGLTF("/models/carousel.glb");
   return (

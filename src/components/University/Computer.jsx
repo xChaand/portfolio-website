@@ -16,14 +16,14 @@ export function Computer(props) {
     <group {...props} dispose={null}>
       <group
         rotation={[-Math.PI / 2, 0, 0]}
-        scale={1.2}
-        position={[3.4, -5.5, 0]}
+        scale={1.4}
+        position={[4.4, -7, 0]}
       >
-        <group rotation={[Math.PI / 1.5, -Math.PI / 6, 0]}>
+        <group rotation={[Math.PI / 1.5, -Math.PI / 3, 0]}>
           <mesh
             geometry={nodes.Object_4.geometry}
             material={materials.TextureGrid}
-            position={[0, 0, -0.031]}
+            position={[0, 0, 0]}
             rotation={[0.087, 0, 0]}
           >
             <Outlines thickness={0.05} color="black" />
