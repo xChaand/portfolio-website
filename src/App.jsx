@@ -3,9 +3,9 @@ import { Canvas } from "@react-three/fiber";
 import { Experience } from "./components/Experience";
 import { Scroll, ScrollControls } from "@react-three/drei";
 import University from "./components/University/University";
-import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Hero from "./components/Hero/Hero";
+import Projects from "./components/Projects/Projects";
 import { useState } from "react";
 import ScrollManager from "./components/ScrollManager";
 
@@ -13,7 +13,7 @@ function App() {
   const [section, setSection] = useState(0);
   return (
     <Canvas orthographic camera={{ zoom: 130, position: [0, 0, 100] }}>
-      <ScrollControls pages={4}>
+      <ScrollControls pages={3}>
         <ScrollManager section={section} onSectionChange={setSection} />
         <Scroll>
           <Experience section={section} />
@@ -21,7 +21,7 @@ function App() {
         <Scroll html>
           <Hero />
           <University />
-          <Projects />
+          {/* <Projects /> */}
           <Contact />
         </Scroll>
       </ScrollControls>

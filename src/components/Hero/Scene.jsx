@@ -4,15 +4,8 @@ import { Carousel } from "./Carousel";
 import { Books } from "../University/Books";
 import { Float } from "@react-three/drei";
 import { Avatar } from "../Avatar";
-import { useControls } from "leva";
 
 export default function Scene(props) {
-  const { animation } = useControls({
-    animation: {
-      value: "wave",
-      options: ["wave", "phone", "chillwave"],
-    },
-  });
   const { section } = props;
   return (
     <>
@@ -26,7 +19,7 @@ export default function Scene(props) {
       {/* <Float speed={2} floatIntensity={3}>
         <Books />
       </Float> */}
-      <Avatar animation={animation} position={[0, -17, 0]} />
+      <Avatar position={[3, -14, 0]} />
     </>
   );
 }
