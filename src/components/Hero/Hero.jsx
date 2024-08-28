@@ -2,7 +2,7 @@ import { Typewriter } from "react-simple-typewriter";
 import VolumeUpIcon from "@mui/icons-material/VolumeUp";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import CodeIcon from "@mui/icons-material/Code";
 import DownloadIcon from "@mui/icons-material/Download";
 
 export default function Hero() {
@@ -42,30 +42,34 @@ export default function Hero() {
           <div className="mt-4 hidden sm:flex sm:flex-row space-x-3">
             <a
               href="https://github.com/xChaand"
+              target="_blank"
               className="bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm p-3 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
             >
               <GitHubIcon />
             </a>
             <a
               href="https://www.linkedin.com/in/chaandb/"
+              target="_blank"
               className="bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm p-3 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
             >
               <LinkedInIcon />
             </a>
             <a
-              href=""
+              href="https://drive.google.com/file/d/1CPJLFgUchNdHKOwHuYawn4JZQkGb3IcJ/view?usp=sharing"
+              target="_blank"
               className="bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm p-3 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
             >
               <DownloadIcon />
-
               <span className=" ml-2 ">Download CV</span>
             </a>
+
             <a
-              href=""
+              href="https://github.com/xChaand/portfolio-website"
+              target="_blank"
               className=" bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm p-3 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
             >
-              <LocalPhoneIcon />
-              <span className="ml-2">Contact Me</span>
+              <CodeIcon />
+              <span className="ml-2">Source Code</span>
             </a>
           </div>
         </div>

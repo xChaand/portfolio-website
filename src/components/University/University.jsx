@@ -10,7 +10,7 @@ export default function University() {
           <span className="bg-red-600 p-1 italic">🦡 #GoBadgers! 🦡</span>
         </p>
         <br />
-        <h1>
+        <h1 className="font-medium">
           Studying <span className="italic underline">Computer Science</span>{" "}
           and <span className="italic underline">Philosophy</span>
         </h1>
