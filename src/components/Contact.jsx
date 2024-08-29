@@ -32,15 +32,15 @@ export default function Contact() {
 
   return (
     <div id="contact" className="h-screen">
-      <div className="w-screen h-full p-14">
-        <div className="m-10 font-extrabold italic text-2xl sm:text-5xl xl:text-7xl text-gray-800">
-          <h1>Contact Me</h1>
-        </div>
+      <div className="w-screen h-full md:p-14">
+        <h1 className="m-6 md:m-10 font-extrabold italic text-5xl md:text-7xl text-gray-800">
+          Contact Me
+        </h1>
         <form
           onSubmit={onSubmit}
-          className="m-10 h-2/3 w-1/2 flex font-medium flex-col"
+          className="m-6 md:m-10 h-2/3 md:w-1/2 flex font-medium flex-col"
         >
-          <h1 className="text-4xl mb-10 font-semibold italic">
+          <h1 className="text-3xl md:text-4xl mb-10 font-semibold italic">
             Write me a message 👇
           </h1>
           <div className="grid grid-cols-2">
@@ -91,13 +91,13 @@ export default function Contact() {
               <a
                 href="https://drive.google.com/file/d/1CPJLFgUchNdHKOwHuYawn4JZQkGb3IcJ/view?usp=sharing"
                 target="_blank"
-                className="bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-md p-4 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                className=" hidden sm:flex  bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm p-2 sm:p-4 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
               >
                 <DownloadIcon />
                 <span className=" ml-2 ">Download CV</span>
               </a>
             </div>
-            <button className="bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 italic w-1/3 rounded-full text-3xl font-semibold p-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
+            <button className="text-lg md:text-3xl bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 italic w-1/3 rounded-full  font-semibold p-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
               Submit
             </button>
           </div>

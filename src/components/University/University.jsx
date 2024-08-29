@@ -1,7 +1,7 @@
 export default function University() {
   return (
     <div className="w-screen">
-      <div className="h-screen backdrop-blur-md font-semibold flex flex-col text-center justify-center text-lg sm:text-2xl xl:text-4xl text-gray-800">
+      <div className="h-screen p-2 backdrop-blur-md font-semibold flex flex-col text-center justify-center sm:text-2xl xl:text-4xl text-gray-800">
         <h1>
           I'm a <span className="italic">Sophomore</span> at the{" "}
           <span className="font-bold">University of Wisconsin-Madison</span>
@@ -14,8 +14,8 @@ export default function University() {
           Studying <span className="italic underline">Computer Science</span>{" "}
           and <span className="italic underline">Philosophy</span>
         </h1>
-        <div className="mt-4 grid grid-cols-5 text-justify">
-          <div className="col-start-2 p-10 col-span-3 backdrop-blur-xl text-xl font-normal ">
+        <div className="mt-4 md:grid grid-cols-5 text-justify">
+          <div className="col-start-2 p-6 md:p-10 col-span-3 backdrop-blur-xl text-sm lg:text-xl font-normal ">
             <p>
               I have expertise in front-end development using{" "}
               <span className="font-semibold">React</span>,{" "}
