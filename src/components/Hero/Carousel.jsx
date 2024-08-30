@@ -8,8 +8,8 @@ import { useGLTF } from "@react-three/drei";
 import { useSpring, animated } from "@react-spring/three";
 
 export function Carousel(props) {
-  const screenSize = window.screen.width;
-  console.log(screenSize);
+  const isMobile = window.screen.width > 768;
+  const isSmallHeight = window.screen.height < 800;
 
   const { carouselRotation } = useSpring({
     from: {
@@ -39,14 +39,14 @@ export function Carousel(props) {
   });
   const { nodes, materials } = useGLTF("/models/carousel.glb");
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} scale={isSmallHeight ? 0.7 : 1}>
       <animated.group
         scale={
-          screenSize > 768
+          isMobile
             ? [0.919 * 0.75, 1 * 0.75, 0.919 * 0.75]
             : [0.919 * 0.4, 1 * 0.4, 0.919 * 0.4]
         }
-        position={screenSize > 768 ? [3.25, -0.6, 0] : [0, -2, 0]}
+        position={isMobile ? [3.25, -0.6, 0] : [0, -2, 0]}
         rotation-x={Math.PI / 6}
         rotation-y={carouselRotation}
       >

@@ -23,7 +23,7 @@ export default function University() {
               frameworks. I enjoy exploring & experimenting with technologies in
               my spare time{" "}
             </p>
-            <p className="mt-3 italic font-light text-base">
+            <p className="mt-3 text-xs italic font-light sm:text-base">
               *this portfolio started off with me experimenting with{" "}
               <span className="font-semibold">React Three Fiber</span>.
             </p>

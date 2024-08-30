@@ -7,14 +7,16 @@ import React from "react";
 import { Outlines, useGLTF } from "@react-three/drei";
 
 export function Thinker(props) {
-  const { section } = props;
+  const isMobile = window.screen.width < 768;
   const { nodes, materials } = useGLTF("models/thinker.glb");
   return (
     <group
       {...props}
       dispose={null}
-      scale={0.038}
-      position={[-5, -8, 0]}
+      scale={isMobile ? 0.02 : 0.038}
+      position={
+        isMobile ? [-1, (-6 * window.screen.height) / 600, -3] : [-5, -8, 0]
+      }
       rotation={[0, Math.PI / 8, 0]}
     >
       <mesh

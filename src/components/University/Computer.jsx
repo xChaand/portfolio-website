@@ -11,13 +11,14 @@ import React from "react";
 import { Outlines, useGLTF } from "@react-three/drei";
 
 export function Computer(props) {
+  const isMobile = window.screen.width < 768;
   const { nodes, materials } = useGLTF("models/computer.glb");
   return (
     <group {...props} dispose={null}>
       <group
         rotation={[-Math.PI / 2, 0, 0]}
-        scale={1.4}
-        position={[4.4, -7, 0]}
+        scale={isMobile ? 0.9 : 1.4}
+        position={isMobile ? [1, -6, 0] : [4.4, -7, 0]}
       >
         <group rotation={[Math.PI / 1.5, -Math.PI / 3, 0]}>
           <mesh
